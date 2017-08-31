@@ -8,6 +8,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Medium</string>
+        </array>
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -42,6 +50,41 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWs-ik-7Tb">
+                                <rect key="frame" x="37.5" y="345" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Uq1-BC-alH"/>
+                                    <constraint firstAttribute="width" constant="300" id="YWy-PJ-ZFN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="70"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tr-Jt-Gbl">
+                                <rect key="frame" x="137" y="425" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6XN-me-IEd"/>
+                                    <constraint firstAttribute="height" constant="50" id="B34-He-pE9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fr-6U-IpY">
+                                <rect key="frame" x="20" y="617" width="335" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="b5f-Cq-FfL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <color key="tintColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="0.25" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zlq-JZ-TTF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -50,19 +93,28 @@
                             <constraint firstItem="03T-BJ-Qr9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CQi-bg-Caw"/>
                             <constraint firstItem="4j3-na-m1I" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="D8d-SN-uMi"/>
                             <constraint firstItem="yzk-2e-Zch" firstAttribute="trailing" secondItem="Yia-O6-etp" secondAttribute="trailing" id="Dy6-cf-1LH"/>
+                            <constraint firstItem="lWs-ik-7Tb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EsJ-tS-QYR"/>
+                            <constraint firstItem="7Tr-Jt-Gbl" firstAttribute="top" secondItem="lWs-ik-7Tb" secondAttribute="bottom" constant="20" id="OrR-yy-66r"/>
                             <constraint firstItem="Yia-O6-etp" firstAttribute="top" secondItem="yzk-2e-Zch" secondAttribute="bottom" constant="25" id="Qis-sh-ON1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3fr-6U-IpY" secondAttribute="bottom" constant="20" id="WNS-32-uaZ"/>
                             <constraint firstItem="4j3-na-m1I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xqe-83-D3W"/>
                             <constraint firstItem="yzk-2e-Zch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="bS6-xe-MLJ"/>
                             <constraint firstItem="yzk-2e-Zch" firstAttribute="leading" secondItem="Yia-O6-etp" secondAttribute="leading" id="bb4-C7-38V"/>
+                            <constraint firstItem="lWs-ik-7Tb" firstAttribute="top" secondItem="Yia-O6-etp" secondAttribute="bottom" constant="50" id="cDh-bK-1TE"/>
                             <constraint firstItem="03T-BJ-Qr9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="fu3-FL-nso"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3fr-6U-IpY" secondAttribute="trailing" constant="20" id="if8-Zb-Joj"/>
                             <constraint firstItem="4j3-na-m1I" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oeq-GG-x1i"/>
                             <constraint firstItem="yzk-2e-Zch" firstAttribute="top" secondItem="03T-BJ-Qr9" secondAttribute="bottom" constant="50" id="pDf-Zr-qJS"/>
+                            <constraint firstItem="3fr-6U-IpY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qVF-np-oA7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yzk-2e-Zch" secondAttribute="trailing" constant="40" id="sqt-pn-Wqu"/>
+                            <constraint firstItem="7Tr-Jt-Gbl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v5M-C0-haG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hoursLbl" destination="7Tr-Jt-Gbl" id="CA1-Lf-EyH"/>
                         <outlet property="priceTxt" destination="Yia-O6-etp" id="sFr-0m-an6"/>
+                        <outlet property="resultLbl" destination="lWs-ik-7Tb" id="PlC-XT-HON"/>
                         <outlet property="wageTxt" destination="yzk-2e-Zch" id="5bn-QD-d5n"/>
                     </connections>
                 </viewController>
